@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Zen Tokyo Zoo",sans-serif;
+
+}
+
+#background-img{
+    height: 100vh;
+    width: 100vw;
+    background-image: url("./screen\ 2.png");
+    background-size:100% 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+}
+
+h1{
+    font-size: 50px;
+    color: rgb(216, 16, 16);
+    /* -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(228, 216, 216); */
+}
+h1:hover{
+    transform: scale3d(1.1,1.1,1.1);
+}
+h4{
+    font: 400px;
+    color: rgb(40, 189, 194);
+    cursor: pointer;
+}
+
+h4:hover{
+    transform: scale3d(2.8,2.8,2.8);
+}
+
+#started{
+    width: 250px;
+    height: 60px;
+    cursor: pointer;
+    
+    font-size: 20px;
+    font-family: "Zen Tokyo Zoo",sans-serif;
+    background-color: rgba(255, 182, 193, 0); 
+    color: aliceblue;
+    position: relative;
+    left: 500px;
+    bottom: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+#started:hover{
+    transform: scale3d(1.1,1.1,1.1);
+}
