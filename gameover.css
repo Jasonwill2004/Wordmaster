@@ -23,4 +23,15 @@
 
 h1{
     font-size: 100px;
+    color: white;
+}
+
+#score{
+    font-size: 50px;
+    color: white;
+}
+
+#started{
+    width: 200px;
+    height: 40px;
 }
