@@ -45,11 +45,11 @@ h1{
     cursor: pointer;
 }
 
-/* @media only screen and (max-width:600px){
+@media only screen and (max-width:600px){
     h1{
-        position: fixed;
-        left: 20px;
-        top: 0px;
-    
+        font-size: 35px;
     }
-} */
+    #score{
+        font-size: 25px;
+    }
+}
