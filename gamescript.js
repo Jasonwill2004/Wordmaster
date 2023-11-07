@@ -17,5 +17,5 @@ button.onclick=()=>{
 }
 
 bTn.onclick=()=>{
-    window.open("./page1.html","_self");
+    window.open("./index.html","_self");
 }
