@@ -46,6 +46,7 @@ body{
     opacity: 0;
     z-index: -999;
     position: absolute;
+    text-transform: uppercase;
     
   }
 
@@ -53,6 +54,7 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    text-transform: uppercase;
   }
 
   .inputs input{

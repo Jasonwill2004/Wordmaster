@@ -210,9 +210,9 @@ const typingInput = document.querySelector(".typing-input")
 
 let word,maxGuesses,corrects=[],incorrects = [];
 let score = 0;
-let correctSound = new Audio("/assets/mixkit-correct-answer-notification-947.wav")
-let wrongSound = new Audio("/assets/mixkit-wrong-answer-bass-buzzer-948-[AudioTrimmer.com].wav")
-let goSound = new Audio("/assets/mixkit-spaceship-system-break-down-2959.wav")
+let correctSound = new Audio("./assets/mixkit-correct-answer-notification-947.wav")
+let wrongSound = new Audio("./assets/mixkit-wrong-answer-bass-buzzer-948-[AudioTrimmer.com].wav")
+let goSound = new Audio("./assets/mixkit-spaceship-system-break-down-2959.wav")
 
 
 function randomWord(){
