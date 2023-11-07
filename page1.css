@@ -19,7 +19,7 @@ body{
 #background-img{
     height: 100vh;
     width: 100vw;
-    background-image: url("screen 1.png");
+    background-image: url("./assets/screen\ 1.png");
     background-size:cover;
     display: flex;
     flex-direction: column;
@@ -78,4 +78,30 @@ h1{
 
 #name{
     font-family: 'Open Sans', sans-serif;
+}
+
+@media only screen and (max-width: 600px){
+    #background-img{
+        height: 100vh;
+        width: 100vw;
+        background-image: url("./assets/screen\ 1.png");
+        background-size:cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 100px;
+        
+    }
+    h1{
+        font-size: 45px;
+    }
+    #started{
+        width: 150px;
+        height: 40px;
+        cursor: pointer;
+        font-size: 20px;
+    }
+    
+
 }

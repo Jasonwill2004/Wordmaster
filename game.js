@@ -209,7 +209,10 @@ const guessLeft = document.querySelector(".guess-left span")
 const typingInput = document.querySelector(".typing-input")
 
 let word,maxGuesses,corrects=[],incorrects = [];
-let score =0;
+let score = 0;
+let correctSound = new Audio("/assets/mixkit-correct-answer-notification-947.wav")
+let wrongSound = new Audio("/assets/mixkit-wrong-answer-bass-buzzer-948-[AudioTrimmer.com].wav")
+let goSound = new Audio("/assets/mixkit-spaceship-system-break-down-2959.wav")
 
 
 function randomWord(){
@@ -241,19 +244,24 @@ function initGame(e) {
                 if(word[i] === key) {
                     corrects.push(key)
                     inputs.querySelectorAll("input")[i].value = key;
+                    correctSound.play()
                 }
             }
         } else{
             maxGuesses-- //decreases the guess by 1
             incorrects.push(`${key}`)
+            wrongSound.play()
         } 
         guessLeft.innerText= maxGuesses;
         wrongLetter.innerText = incorrects;
+        
+        
     }
     typingInput.value="";   
 
     setTimeout(() => {
         if(corrects.length === word.length) {
+            goSound.play()
             alert(`Congrats! You found the word ${word.toUpperCase()}`);
             score++;
 
@@ -267,7 +275,10 @@ function initGame(e) {
             }
         }
     }, 100);
-}
+}     
+
+
 resetBtn.addEventListener("click",randomWord)
 typingInput.addEventListener("input", initGame);
 document.addEventListener("click", () => typingInput.focus());  
+sessionStorage.setItem("score" ,"0")

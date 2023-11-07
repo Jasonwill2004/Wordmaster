@@ -14,7 +14,7 @@ body{
 #background-img{
     height: 100vh;
     width: 100vw;
-    background-image: url("./screen\ 2.png");
+    background-image: url("./assets/screen\ 2.png ");
     background-size:100% 100%;
     display: flex;
     flex-direction: column;
@@ -60,4 +60,23 @@ h4:hover{
 }
 #started:hover{
     transform: scale3d(1.1,1.1,1.1);
+}
+
+@media only screen and (max-width: 600px){
+    h1{
+        font-size: 30px;
+        position: relative;
+        top: 50px;
+    }
+    h4{
+        font-size: 20px;
+    
+    }
+    #started{
+        width: 250px;
+        height: 60px;
+        position: relative;
+        left:10px;
+        bottom: 50px;
+    }
 }

@@ -13,7 +13,7 @@ body{
 #background-img{
     height: 100vh;
     width: 100vw;
-    background-image: url("./screen\ 2.png");
+    background-image: url("./assets/screen\ 2.png");
     background-size:100% 100%;
     display: flex;
     flex-direction: column;
@@ -57,4 +57,29 @@ h1{
 
 #btn:hover{
     transform: scale3d(1.1,1.1,1.1);
+}
+
+@media only screen and (max-width: 600px){
+    h1{
+        font-size: 25px;
+        color: beige;
+        padding-right: 30px;
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black;
+    }
+    #btn{
+        width: 100px;
+        height: 45px;
+        font-size: 20px;
+        position: relative;
+        left: -10px;
+        top: 40px;
+    }
+    #username{
+        width: 300px;
+        height: 30px;
+        font-size: large;
+        text-align: center;
+    }
+
 }
