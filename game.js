@@ -1,3 +1,4 @@
+//creating a list for series of words
 const wordList = [
     {
         word: "python",
@@ -5,7 +6,7 @@ const wordList = [
     },
     {
         word: "guitar",
-        hint: "a musical instrument"
+        hint: "a musical instrument"   
     },
     {
         word: "aim",
@@ -210,7 +211,7 @@ const typingInput = document.querySelector(".typing-input")
 
 let word,maxGuesses,corrects=[],incorrects = [];
 let score = 0;
-let correctSound = new Audio("./assets/mixkit-correct-answer-notification-947.wav")
+let correctSound = new Audio("./assets/mixkit-correct-answer-notification-947.wav ")
 let wrongSound = new Audio("./assets/mixkit-wrong-answer-bass-buzzer-948-[AudioTrimmer.com].wav")
 let goSound = new Audio("./assets/mixkit-spaceship-system-break-down-2959.wav")
 
@@ -218,13 +219,16 @@ let goSound = new Audio("./assets/mixkit-spaceship-system-break-down-2959.wav")
 function randomWord(){
     // getting random words from wordlist
     let ranObj = wordList[Math.floor(Math.random()*wordList.length)];
-    word = ranObj.word
-    maxGuesses=8; corrects=[];incorrects = []; // getting word of random objects
-    console.log(word);
+    word = ranObj.word// getting word of random objects
 
+  
+     // Set word and related variables
+    maxGuesses=8; corrects=[];incorrects = []; 
+    console.log(word);
+    // Update hint text and guessLeft
     hint.innerText=ranObj.hint
     guessLeft.innerText=maxGuesses;
-
+    // Create an input element for each letter in the word
     let html = ""
     for (let i = 0; i < word.length; i++) {
         html+=`<input type="text" disabled >`
@@ -236,9 +240,12 @@ function randomWord(){
 randomWord();
 
 function initGame(e) {
+    // get key value from input field
     let key = e.target.value
+    // check if key is a letter, not already used, and the word contains the key
     if(key.match(/^[A-Za-z]+$/)&& !incorrects.includes(` ${key}`)&& !corrects.includes(key)){
         console.log(key);
+        // check if key is in the word
         if(word.includes(key)) {
             for (let i = 0; i < word.length; i++) {
                 if(word[i] === key) {
@@ -249,9 +256,10 @@ function initGame(e) {
             }
         } else{
             maxGuesses-- //decreases the guess by 1
-            incorrects.push(`${key}`)
+            incorrects.push(`${key}`)// add key to incorrect letters
             wrongSound.play()
         } 
+        // update display with new guess count and incorrect letters                      
         guessLeft.innerText= maxGuesses;
         wrongLetter.innerText = incorrects;
         
